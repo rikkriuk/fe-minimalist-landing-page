@@ -45,9 +45,9 @@ describe("FooterComponent", () => {
         </BrowserRouter>
       );
 
-      const linkItem = ["Intro", "Home", "Work", "Pricing", "Contact Us", "About", "News", "Testimonial"];
+      const linkItems = ["Intro", "Home", "Work", "Pricing", "Contact Us", "About", "News", "Testimonial"];
    
-      linkItem.forEach((link) => {
+      linkItems.forEach((link) => {
          expect(screen.getByText(link)).toBeInTheDocument();
       })
    });

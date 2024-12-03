@@ -1,0 +1,8 @@
+[{
+      "relation": ["delegate_permission/common.handle_all_urls"],
+      "target": {
+        "namespace": "android_app",
+        "package_name": "app.vercel.fe_minimalist_landing_page.twa",
+        "sha256_cert_fingerprints": ["9B:08:F3:2F:88:AC:AE:D7:8C:19:F1:05:52:C2:CE:7B:3E:E1:30:59:5B:F5:EA:C0:F4:10:B4:9B:93:3D:F6:C6"]
+      }
+    }]

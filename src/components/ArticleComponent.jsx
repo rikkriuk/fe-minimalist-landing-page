@@ -3,7 +3,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const ArticleComponent = ({ articles }) => {
-   console.log("articles", 900)
    return (
       <section className="flex flex-col gap-10 md:gap-20 my-20">
          <nav className="flex gap-7 flex-col lg:flex-row justify-around items-center mt-20 px-6 md:px-0">

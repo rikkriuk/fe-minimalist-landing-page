@@ -33,7 +33,7 @@ const ThreeStepComponent = () => {
         <div className="flex justify-center items-center">
           <img
             src={HandPhoneImg}
-            alt="handphone"
+            alt="Handphone"
             width={700}
             height={858}
           />

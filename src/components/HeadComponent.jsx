@@ -1,7 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
 import PropTypes from "prop-types";
-import WebLogo from "../../public/web-logo.ico";
+import WebLogo from "../../public/favicon.ico";
 
 const HeadComponent = ({ title, description, keywords }) => {
   return (

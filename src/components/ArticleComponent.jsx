@@ -1,28 +1,9 @@
+import PropTypes from "prop-types";
 import React from "react";
 import { Link } from "react-router-dom";
-import BlogImg1 from "../assets/blog image/blog-1.png";
-import BlogImg2 from "../assets/blog image/blog-2.png";
-import BlogImg3 from "../assets/blog image/blog-3.png";
 
-const blogs = [
-   {
-      img: BlogImg1,
-      title: "Building a stronger brand with no-code tools",
-      content: "Learn about taking on a content design mindset from an expert in brand strategy and content design."
-   },
-   {
-      img: BlogImg2,
-      title: "Copywriters and designers: How to work better together",
-      content: "Good design and good copy go hand in hand. Here’s how to build closer collaboration between these two."
-   },
-   {
-      img: BlogImg3,
-      title: "A guide to photography website design",
-      content: "A collection of resources for photography website design covering everything"
-   }
-];
-
-const ArticleComponent = () => {
+const ArticleComponent = ({ articles }) => {
+   console.log("articles", 900)
    return (
       <section className="flex flex-col gap-10 md:gap-20 my-20">
          <nav className="flex gap-7 flex-col lg:flex-row justify-around items-center mt-20 px-6 md:px-0">
@@ -34,14 +15,14 @@ const ArticleComponent = () => {
          </nav>
 
          <div className="flex justify-center px-6 items-start flex-wrap gap-32">
-            {blogs.map((blog, index) => (
+            {articles.map((article, index) => (
                <div key={index} className="flex flex-col justify-between w-[337px] h-[580px]">
                   <div>
-                     <img src={blog.img} alt={blog.title}/>
+                     <img src={article.img} alt={article.title}/>
 
                      <div>
-                        <h4 className="text-2xl font-bold my-6 line-clamp-2">{blog.title}</h4>
-                        <p className="font-normal text-base text-gray-500 line-clamp-3">{blog.content}</p>
+                        <h4 className="text-2xl font-bold my-6 line-clamp-2">{article.title}</h4>
+                        <p className="font-normal text-base text-gray-500 line-clamp-3">{article.content}</p>
                      </div>
                   </div>
                   <Link className="flex items-center gap-3 mt-6 font-bold text-base" to={"/"}>
@@ -56,5 +37,15 @@ const ArticleComponent = () => {
       </section>
    )
 }
+
+ArticleComponent.propTypes = {
+   articles: PropTypes.arrayOf(
+      PropTypes.shape({
+         img: PropTypes.string.isRequired,
+         title: PropTypes.string.isRequired,
+         content: PropTypes.string.isRequired,
+      })
+   ),
+};
 
 export default ArticleComponent;

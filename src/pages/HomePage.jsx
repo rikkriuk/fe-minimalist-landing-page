@@ -5,8 +5,8 @@ import PorfolioContainer from "../containers/PortfolioContainer";
 import ThreeStepComponet from "../components/ThreeStepComponent";
 import TestimonialComponent from "../components/TestimonialComponent";
 import TrustedComponent from "../components/TrustedComponent";
-import ArticleComponent from "../components/ArticleComponent";
 import BannerComponent from "../components/BannerComponent";
+import ArticleContainer from "../containers/ArticleContainer";
 
 const HomePage = () => {
    return (
@@ -17,7 +17,7 @@ const HomePage = () => {
          <ThreeStepComponet />
          <TestimonialComponent />
          <TrustedComponent />
-         <ArticleComponent />
+         <ArticleContainer />
          <BannerComponent />
       </main>
    )

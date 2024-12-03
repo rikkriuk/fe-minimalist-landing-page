@@ -1,7 +1,20 @@
-export default function App() {
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import HeaderComponent from "./components/HeaderComponent";
+import HomePage from "./pages/HomePage";
+import "./App.css";
+import FooterComponent from "./components/FooterComponent";
+
+const App = () => {
   return (
-    <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
+    <Router>
+      <HeaderComponent />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+      </Routes>
+      <FooterComponent />
+    </Router>
   )
 }
+
+export default App;

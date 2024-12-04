@@ -3,8 +3,10 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import HeaderComponent from "./components/HeaderComponent";
 import HomePage from "./pages/HomePage";
 import FooterComponent from "./components/FooterComponent";
-import FeaturePage from "./pages/FeaturePage";
+import OurWorkPage from "./pages/OurWorkPage";
 import "./App.css";
+import OurWorkDetailPage from "./pages/OurWorkDetailPage";
+import AboutUsPage from "./pages/AboutUsPage";
 
 const App = () => {
   return (
@@ -12,9 +14,9 @@ const App = () => {
       <HeaderComponent />
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/about" element={<FeaturePage />} />
-        <Route path="/contact" element={<h1>Contact Page</h1>} />
-        <Route path="/blogs" element={<h1>Blogs Page</h1>} />
+        <Route path="/about" element={<OurWorkPage />} />
+        <Route path="/contact" element={<OurWorkDetailPage />} />
+        <Route path="/blogs" element={<AboutUsPage />} />
         <Route path="/*" element={<h1>404 - Not Found</h1>} />
       </Routes>
       <FooterComponent />

@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from "react";
 import CompanyLogo from "../assets/company-logo.png";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const HeaderComponent = () => {
    const [isNavOpen, setIsNavOpen] = useState(false);
    const [isScrolled, setIsScrolled] = useState(false);
-
+   const location = useLocation();
    
    useEffect(() => {
+      window.scrollTo(0, 0);
       const handleScroll = () => {
        if (window.scrollY > 50) {
          setIsScrolled(true);
@@ -20,7 +21,11 @@ const HeaderComponent = () => {
      return () => {
         window.removeEventListener("scroll", handleScroll);
      };
-   }, []);
+   }, [location]);
+
+   const handleClose = () => {
+      setIsNavOpen(false);
+   }
  
    const toggleNav = () => {
       setIsNavOpen(!isNavOpen);
@@ -78,16 +83,16 @@ const HeaderComponent = () => {
          >
             <ul className="flex flex-col gap-8 text-center overflow-hidden">
                <li className="text-[#1A1A1A] hover:scale-110 transition-transform duration-200">
-                  <Link to={"/"} className="px-4 py-2">HOME</Link>
+                  <Link to={"/"} onClick={handleClose} className="px-4 py-2">HOME</Link>
                </li>
                <li className="text-[#1A1A1A] hover:scale-110 transition-transform duration-200">
-                  <Link to={"/about"} className="px-4 py-2">ABOUT</Link>
+                  <Link to={"/about"} onClick={handleClose} className="px-4 py-2">ABOUT</Link>
                </li>
                <li className="text-[#1A1A1A] hover:scale-110 transition-transform duration-200">
-                  <Link to={"/contact"} className="px-4 py-2">CONTACT</Link>
+                  <Link to={"/contact"} onClick={handleClose} className="px-4 py-2">CONTACT</Link>
                </li>
                <li className="text-[#1A1A1A] hover:scale-110 transition-transform duration-200">
-                  <Link to={"/blogs"} className="px-4 py-2">BLOGS</Link>
+                  <Link to={"/blogs"} onClick={handleClose} className="px-4 py-2">BLOGS</Link>
                </li>
             </ul>
          </nav>

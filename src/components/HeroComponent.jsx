@@ -9,7 +9,7 @@ const HeroComponent = ({ hero }) => {
       <img 
          src={hero.handImg} 
          alt="Hand image" 
-         className="absolute z-10 left-0 right-0 bottom-0"
+         className={`absolute z-10 ${hero.type === "ourWorkDetail" ? "right-20 bottom-0 w-1/2" : "left-0 right-0 bottom-0"}`}
       />
 
       <img 
@@ -20,7 +20,7 @@ const HeroComponent = ({ hero }) => {
       />
 
       <div className={`absolute z-50 left-0 top-1/3 transform -translate-y-1/3 pl-0 ${hero.type === "home" ? "md:pl-28 lg:pl-44 xl:pl-72 gap-14 md:gap-28" : "items-center text-center gap-6"} w-full flex flex-col mt-0 md:mt-12`}>
-         <h1 className="text-5xl px-6 md:pl-0 md:text-7xl lg:text-8xl font-bold text-[#101010] leading-tight w-full md:w-3/4 lg:w-4/5 xl:w-[750px]">
+         <h1 className="text-5xl px-6 md:pl-0 md:text-7xl lg:text-8xl font-bold text-[#101010] leading-tight w-full md:w-3/4 lg:w-4/5 xl:w-[850px]">
             {hero.title}
          </h1>
 
@@ -40,7 +40,7 @@ const HeroComponent = ({ hero }) => {
                </>
             )}
 
-         {hero.actionType === "mouse" && (
+         {(hero.actionType === "mouse" && hero.type !== "ourWorkDetail") && (
             <svg width="64" height="62" viewBox="0 0 64 62" fill="none" xmlns="http://www.w3.org/2000/svg">
                <path d="M32 58.7709C19.8667 58.7709 10 49.2126 10 37.4584V24.5417C10 12.7876 19.8667 3.22925 32 3.22925C44.1333 3.22925 54 12.7876 54 24.5417V37.4584C54 49.2126 44.1333 58.7709 32 58.7709ZM32 7.10425C22.08 7.10425 14 14.9317 14 24.5417V37.4584C14 47.0684 22.08 54.8959 32 54.8959C41.92 54.8959 50 47.0684 50 37.4584V24.5417C50 14.9317 41.92 7.10425 32 7.10425Z" fill="#101010"/>
                <path d="M32 30.3542C28.6933 30.3542 26 27.745 26 24.5417V19.375C26 16.1717 28.6933 13.5625 32 13.5625C35.3067 13.5625 38 16.1717 38 19.375V24.5417C38 27.745 35.3067 30.3542 32 30.3542ZM32 17.4375C30.9067 17.4375 30 18.3158 30 19.375V24.5417C30 25.6008 30.9067 26.4792 32 26.4792C33.0933 26.4792 34 25.6008 34 24.5417V19.375C34 18.3158 33.0933 17.4375 32 17.4375Z" fill="#101010"/>

@@ -41,6 +41,12 @@ const pageTypes = {
       title: "Read best articles from us.",
       actionType: "mouse-bootom",
       handImg: ThreeHandImg
+   },
+   blogsDetail: {
+      type: "blogsDetail",
+      title: "We write article with love.",
+      actionType: "mouse-bootom",
+      handImg: ThreeHandImg
    }
 }
 

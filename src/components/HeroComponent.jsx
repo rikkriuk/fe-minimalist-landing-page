@@ -12,7 +12,8 @@ const HeroComponent = ({ hero }) => {
                className={`absolute z-10 
                   ${(hero.type === "ourWorkDetail" || 
                      hero.type === "contactUs" || 
-                     hero.type === "blogs") 
+                     hero.type === "blogs" ||
+                     hero.type === "blogsDetail") 
                      ? "right-20 bottom-0 w-1/2" : "left-0 right-0 bottom-0"}`}
             />
 

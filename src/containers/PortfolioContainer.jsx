@@ -24,7 +24,7 @@ const portfolio = {
          PortfolioImg7,
       ]
    },
-   feature: {
+   ourWork: {
       type: "feature",
       title: "Featured Work",
       navbar: "We are an award-winning creative & design agency committed to excellence since forever.",

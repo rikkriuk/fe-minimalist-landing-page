@@ -4,7 +4,7 @@ import PortfolioDetailImg from "../assets/portfolio-8.png"
 const AboutUsComponent = () => {
    return (
       <section className="px-6 lg:px-40 my-20">
-         <div className="mb-10 grid grid-cols-[60%,40%]">
+         <div className="mb-10 gap-7 md:gap-0 grid grid-cols-1 md:grid-cols-[60%,40%]">
             <div>
                <h3 className="text-3xl font-bold mb-6">Who we are</h3>
 

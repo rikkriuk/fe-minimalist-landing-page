@@ -21,7 +21,7 @@ const pageTypes = {
    ourWorkDetail: {
       type: "ourWorkDetail",
       title: "We work with love.",
-      actionType: "mouse",
+      actionType: "mouse-bottom",
       handImg: ThreeHandImg
    },
    aboutUs: {

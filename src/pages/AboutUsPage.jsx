@@ -9,6 +9,11 @@ import BannerComponent from "../components/BannerComponent";
 const AboutUsPage = () => {
   return (
     <main>
+      <HeadComponent
+          title="About Us - dsgnr."
+          description="dsgnr. about us page."
+          keywords="dsgnr., about, about us, design, agency, startup, business, digital product, product"
+      />
       <HeroContainer page="aboutUs" />
       <AboutUsComponent />
       <TeamsContainer />

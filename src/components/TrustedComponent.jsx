@@ -9,10 +9,10 @@ const getBorderClasses = (index) => {
  
    return `
      border-b-2 md:border-r-2 xl:border-b-2 border-gray-300 p-16 flex justify-center items-center
-     ${isFourth ? "xl:border-r-0" : ""}
+     ${isFourth ? "lg:border-r-0 xl:border-r-0" : ""}
      ${isEighth ? "md:border-b-0 xl:border-b-0 xl:border-r-0" : ""}
      ${isSeventh ? "xl:border-r-2 md:border-b-0 lg:border-b-0" : ""}
-     ${isEven ? "md:border-r-0 lg:border-r-0 xl:border-r-2" : ""}
+     ${isEven ? "md:border-r- lg:border-r-0 xl:border-r-2" : ""}
      ${isAfterFourthAndNotMultipleOfFour ? "xl:border-b-0" : ""}
    `;
  };

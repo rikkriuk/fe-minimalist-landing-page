@@ -1,13 +1,13 @@
 import React from "react";
-import HeroComponent from "../components/HeroComponent";
 import IntroductionComponent from "../components/IntroductionComponent";
 import PorfolioContainer from "../containers/PortfolioContainer";
 import ThreeStepComponet from "../components/ThreeStepComponent";
 import TestimonialComponent from "../components/TestimonialComponent";
-import TrustedComponent from "../components/TrustedComponent";
 import BannerComponent from "../components/BannerComponent";
 import ArticleContainer from "../containers/ArticleContainer";
 import HeadComponent from "../components/HeadComponent";
+import HeroContainer from "../containers/HeroContainer";
+import TrustedContainer from "../containers/TrustedContainer";
 
 const HomePage = () => {
    return (
@@ -17,12 +17,12 @@ const HomePage = () => {
             description="dsgnr. is a design agency that helps startups and businesses to build great digital products."
             keywords="dsgnr., design agency, design, agency, startup, business, digital product, product"
          />
-         <HeroComponent />
+         <HeroContainer page="home" />
          <IntroductionComponent />
-         <PorfolioContainer />
+         <PorfolioContainer page="home" />
          <ThreeStepComponet />
          <TestimonialComponent />
-         <TrustedComponent />
+         <TrustedContainer page="home" />
          <ArticleContainer />
          <BannerComponent />
       </main>

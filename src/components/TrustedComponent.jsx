@@ -1,24 +1,4 @@
 import React from "react";
-import SpotifyLogo from "../assets/trusted company logo/spotify-light.svg";
-import DropboxLogo from "../assets/trusted company logo/dropbox-light.svg";
-import TeslaLogo from "../assets/trusted company logo/tesla-light.svg";
-import RedditLogo from "../assets/trusted company logo/reddit-light.svg";
-
-import GoogleLogo from "../assets/trusted company logo/google-light.svg";
-import StripeLogo from "../assets/trusted company logo/stripe-light.svg";
-import DhlLogo from "../assets/trusted company logo/dhl-light.svg";
-import AirbnbLogo from "../assets/trusted company logo/airbnb-light.svg";
-
-const trustedCompanyLogo = [
-   SpotifyLogo,
-   DropboxLogo,
-   TeslaLogo,
-   RedditLogo,
-   GoogleLogo,
-   StripeLogo,
-   DhlLogo,
-   AirbnbLogo,
-];
 
 const getBorderClasses = (index) => {
    const isFourth = index + 1 === 4;
@@ -38,17 +18,25 @@ const getBorderClasses = (index) => {
  };
 
 
-const TrustedComponent = () => {
+const TrustedComponent = ({ logos, page }) => {
    return (
-         <section className="grid md:grid-cols-2 xl:grid-cols-4 lg:px-20 xl:px-52 py-40">
-         {trustedCompanyLogo.map((svg, index) => (
-            <div
-               key={index}
-               className={getBorderClasses(index)}
-            >
-               <img src={svg} alt="Company Logo" />
+         <section className="py-52 flex flex-col gap-20 justify-center items-center">
+            {page !== "home" && (
+               <div className="flex justify-center items-center px-6 w-full md:w-4/5 xl:w-2/5 text-center">
+                  <h3 className="text-[44px] font-bold">We worked with the world’s biggest brands and the most innovative startups</h3>
+               </div>
+            )}
+            <div className="grid md:grid-cols-2 xl:grid-cols-4 lg:px-20 xl:px-52">
+            {logos.map((svg, index) => (
+               <div
+                  key={index}
+                  className={getBorderClasses(index)}
+               >
+                  <img src={svg} alt="Company Logo" />
+               </div>
+            ))}
+
             </div>
-         ))}
          </section>
 
    )

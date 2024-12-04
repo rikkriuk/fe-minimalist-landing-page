@@ -2,25 +2,32 @@ import PropTypes from "prop-types";
 import React from "react";
 import { Link } from "react-router-dom";
 
-const ArticleComponent = ({ articles }) => {
+const ArticleComponent = ({ articles, page }) => {
    return (
       <section className="flex flex-col gap-10 md:gap-20 my-20">
-         <nav className="flex gap-7 flex-col lg:flex-row justify-around items-center mt-20 px-6 md:px-0">
-            <div className="xl:ml-0">
-               <h3 className="text-[44px] font-bold">Our Work So Far</h3>
+         {page === "home" ? (
+            <nav className="flex gap-7 flex-col lg:flex-row justify-around items-center mt-20 px-6 md:px-0">
+               <div className="xl:ml-0">
+                  <h3 className="text-[44px] font-bold">Our Work So Far</h3>
+               </div>
+
+               <Link className="text-xl text-[#101010] py-1 font-bold border-b-2 border-black" to={"/"}>SEE ALL</Link>
+            </nav>
+         ) : (
+            <div className="flex justify-center lg:justify-start lg:px-72 px-6">
+               <h3 className="text-[44px] font-bold">Check out our interesting articles</h3>
             </div>
+         )}
 
-            <Link className="text-xl text-[#101010] py-1 font-bold border-b-2 border-black" to={"/"}>SEE ALL</Link>
-         </nav>
 
-         <div className="flex justify-center px-6 items-start flex-wrap gap-32">
+         <div className="flex justify-center lg:px-40 px-6 items-start flex-wrap gap-5 xl:gap-32">
             {articles.map((article, index) => (
-               <div key={index} className="flex flex-col justify-between w-[337px] h-[580px]">
+               <div key={index} className="flex shadow-md p-4 flex-col justify-between w-[352px] h-[596px]">
                   <div>
                      <img src={article.img} alt={article.title}/>
 
                      <div>
-                        <h4 className="text-2xl font-bold my-6 line-clamp-2">{article.title}</h4>
+                        <Link to={"/blogs/2"} className="text-2xl font-bold my-6 line-clamp-2">{article.title}</Link>
                         <p className="font-normal text-base text-gray-500 line-clamp-3">{article.content}</p>
                      </div>
                   </div>

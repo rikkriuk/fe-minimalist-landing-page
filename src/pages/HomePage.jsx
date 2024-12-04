@@ -23,7 +23,7 @@ const HomePage = () => {
          <ThreeStepComponet />
          <TestimonialComponent />
          <TrustedContainer page="home" />
-         <ArticleContainer />
+         <ArticleContainer page="home" />
          <BannerComponent />
       </main>
    )

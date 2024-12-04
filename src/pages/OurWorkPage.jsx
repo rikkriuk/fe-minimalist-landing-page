@@ -14,8 +14,8 @@ const OurWorkPage = () => {
             keywords="dsgnr., our work, design agency, design, agency, startup, business, digital product, product"
          />
          <HeroContainer page={"ourWork"} />
-         <PorfolioContainer page={"feature"} />
-         <TrustedContainer page={"feature"} />
+         <PorfolioContainer page={"ourWork"} />
+         <TrustedContainer page={"ourWork"} />
          <BannerComponent />
       </main>
    )

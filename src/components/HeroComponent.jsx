@@ -1,5 +1,4 @@
 import React from "react";
-import HandImg from "../assets/hand.png";
 import BgTrush from "../assets/bg-trush.png";
 import PropTypes from "prop-types";
 
@@ -10,7 +9,11 @@ const HeroComponent = ({ hero }) => {
             <img 
                src={hero.handImg} 
                alt="Hand image" 
-               className={`absolute z-10 ${(hero.type === "ourWorkDetail" || hero.type === "contactUs") ? "right-20 bottom-0 w-1/2" : "left-0 right-0 bottom-0"}`}
+               className={`absolute z-10 
+                  ${(hero.type === "ourWorkDetail" || 
+                     hero.type === "contactUs" || 
+                     hero.type === "blogs") 
+                     ? "right-20 bottom-0 w-1/2" : "left-0 right-0 bottom-0"}`}
             />
 
             <img 

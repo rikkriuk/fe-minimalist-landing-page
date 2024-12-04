@@ -7,6 +7,7 @@ import OurWorkPage from "./pages/OurWorkPage";
 import "./App.css";
 import OurWorkDetailPage from "./pages/OurWorkDetailPage";
 import AboutUsPage from "./pages/AboutUsPage";
+import ContactUsPage from "./pages/ContactUsPage";
 
 const App = () => {
   return (
@@ -14,9 +15,13 @@ const App = () => {
       <HeaderComponent />
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/about" element={<OurWorkPage />} />
-        <Route path="/contact" element={<OurWorkDetailPage />} />
-        <Route path="/blogs" element={<AboutUsPage />} />
+        <Route path="/our-works" element={<OurWorkPage />} />
+        <Route path="/our-works/:id" element={<OurWorkDetailPage />} />
+        <Route path="/about-us" element={<AboutUsPage />} />
+        <Route path="/contact-us" element={<ContactUsPage />} />
+        <Route path="/blogs" element={<h1>Blog</h1>} />
+        <Route path="/blogs/:id" element={<h1>Detail</h1>} />
+
         <Route path="/*" element={<h1>404 - Not Found</h1>} />
       </Routes>
       <FooterComponent />

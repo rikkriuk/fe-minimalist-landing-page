@@ -86,10 +86,13 @@ const HeaderComponent = () => {
                   <Link to={"/"} onClick={handleClose} className="px-4 py-2">HOME</Link>
                </li>
                <li className="text-[#1A1A1A] hover:scale-110 transition-transform duration-200">
-                  <Link to={"/about"} onClick={handleClose} className="px-4 py-2">ABOUT</Link>
+                  <Link to={"/our-works"} onClick={handleClose} className="px-4 py-2">OUR WORKS</Link>
                </li>
                <li className="text-[#1A1A1A] hover:scale-110 transition-transform duration-200">
-                  <Link to={"/contact"} onClick={handleClose} className="px-4 py-2">CONTACT</Link>
+                  <Link to={"/about-us"} onClick={handleClose} className="px-4 py-2">ABOUT US</Link>
+               </li>
+               <li className="text-[#1A1A1A] hover:scale-110 transition-transform duration-200">
+                  <Link to={"/contact-us"} onClick={handleClose} className="px-4 py-2">CONTACT US</Link>
                </li>
                <li className="text-[#1A1A1A] hover:scale-110 transition-transform duration-200">
                   <Link to={"/blogs"} onClick={handleClose} className="px-4 py-2">BLOGS</Link>

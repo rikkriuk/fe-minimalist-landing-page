@@ -29,6 +29,12 @@ const pageTypes = {
       title: "We specialize in problem solving.",
       actionType: "mouse",
       handImg: ManyHandImg
+   },
+   contactUs: {
+      type: "contactUs",
+      title: "We would love to hear from you.",
+      actionType: "mouse-bottom",
+      handImg: ThreeHandImg
    }
 }
 

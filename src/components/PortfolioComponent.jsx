@@ -43,7 +43,7 @@ const PortfolioComponent = ({ portfolio }) => {
           />
 
           <Link
-            to={`${image.id}`}
+            to={`/our-works/${image.id}`}
             className="text-[32px] font-bold absolute bottom-0 left-0 right-0 text-white bg-black/60 opacity-0 transition-opacity duration-300 group-hover:opacity-100 text-center py-4"
           >
             {image.title}

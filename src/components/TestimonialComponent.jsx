@@ -1,25 +1,6 @@
 import React from "react";
-import PersonImg1 from "../assets/person-1.png";
-import PersonImg2 from "../assets/person-2.png";
 
-const testimonial = [
-  {
-    name: "Milton Austin",
-    job: "Product Manager, Slack",
-    testimonial:
-      "I would like to say that this experience was great. The team was very professional and answered all our questions and was committed to completing our project on time. We are happy to have worked with dsgnr. and would hire them again and would recommend them to anyone else looking for a designer and developer. They know their stuff!",
-    image: PersonImg1,
-  },
-  {
-    name: "Jane Cooper",
-    job: "CO-founder, catco",
-    testimonial:
-      "Great work ethic and very reliable! Brooklyn was our logo designer. She walked us through many iterations and guided us on all aspects of the process. Very professional, will use them again soon!",
-    image: PersonImg2,
-  },
-];
-
-const TestimonialComponent = () => {
+const TestimonialComponent = ({ testimonial }) => {
   return (
     <section className="px-6 md:px-24 py-24">
       <div className="ml-0 lg:ml-40 xl:ml-64">
@@ -48,18 +29,18 @@ const TestimonialComponent = () => {
             </div>
 
             <div className="flex flex-col gap-6 h-full justify-between">
-              <p className="font-normal text-lg">{item.testimonial}</p>
+              <p className="font-normal text-lg">{item.message}</p>
               <div className="flex items-center gap-4 mt-4">
                 <img
-                  src={item.image}
+                  src={item.foto_profile}
                   alt={item.name}
                   width={90}
                   height={90}
-                  className="rounded-full"
+                  className="rounded-full object-cover w-[90px] h-[90px]"
                 />
                 <div>
                   <h4 className="font-bold text-xl">{item.name}</h4>
-                  <p className="text-gray-600">{item.job}</p>
+                  <p className="text-gray-600">{item.title}</p>
                 </div>
               </div>
             </div>

@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 const HeroComponent = ({ hero }) => {
    return (
       <section>
-         <div className={`bg-primary ${hero.actionType === "mouse-bottom" ? "h-[90vh]" : "h-screen"} relative overflow-hidden`}>
+         <div role="hero-section" className={`bg-primary ${hero.actionType === "mouse-bottom" ? "h-[90vh]" : "h-screen"} relative overflow-hidden`}>
             <img 
                src={hero.handImg} 
                alt="Hand image" 
@@ -72,7 +72,13 @@ const HeroComponent = ({ hero }) => {
 }
 
 HeroComponent.propTypes = {
-   hero: PropTypes.object.isRequired
-}
+  hero: PropTypes.shape({
+    actionType: PropTypes.string.isRequired,
+    handImg: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    type: PropTypes.string.isRequired,
+  }).isRequired,
+};
+
 
 export default HeroComponent;

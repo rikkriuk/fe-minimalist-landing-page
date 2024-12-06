@@ -1,28 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
 import TeamComponent from "../components/TeamComponent";
-import Team1Img from "../assets/team-1.png";
-import Team2Img from "../assets/team-2.png";
-import Team3Img from "../assets/team-3.png";
-
-const teams = [
-   {
-      name: "Esther Howard",
-      job: "Founder",
-      img: Team1Img
-   },
-   {
-      name: "Cody Fisher",
-      job: "Developer",
-      img: Team2Img
-   },
-   {
-      name: "Brooklyn Simmons",
-      job: "Desginer",
-      img: Team3Img
-   }
-]
+import { useDispatch, useSelector } from "react-redux";
+import { getTeams } from "../redux/slices/teamSlice";
 
 const TeamsContainer = () => {
+   const dispatch = useDispatch();
+   const { teams } = useSelector((state) => state.team);
+
+   useEffect(() => {
+      dispatch(getTeams());
+   }, []);
+
    return (
       <section className="px-6 lg:px-40 mb-20 flex flex-col items-center">
          <div className="my-20">

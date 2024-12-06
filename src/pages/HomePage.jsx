@@ -2,12 +2,12 @@ import React from "react";
 import IntroductionComponent from "../components/IntroductionComponent";
 import PorfolioContainer from "../containers/PortfolioContainer";
 import ThreeStepComponet from "../components/ThreeStepComponent";
-import TestimonialComponent from "../components/TestimonialComponent";
 import BannerComponent from "../components/BannerComponent";
 import ArticleContainer from "../containers/ArticleContainer";
 import HeadComponent from "../components/HeadComponent";
 import HeroContainer from "../containers/HeroContainer";
 import TrustedContainer from "../containers/TrustedContainer";
+import TestimonialContainer from "../containers/TestimonialContainer";
 
 const HomePage = () => {
    return (
@@ -21,7 +21,7 @@ const HomePage = () => {
          <IntroductionComponent />
          <PorfolioContainer page="home" />
          <ThreeStepComponet />
-         <TestimonialComponent />
+         <TestimonialContainer />
          <TrustedContainer page="home" />
          <ArticleContainer page="home" />
          <BannerComponent />

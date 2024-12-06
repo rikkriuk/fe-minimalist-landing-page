@@ -22,7 +22,7 @@ const App = () => {
         <Route path="/about-us" element={<AboutUsPage />} />
         <Route path="/contact-us" element={<ContactUsPage />} />
         <Route path="/blogs" element={<BlogsPage />} />
-        <Route path="/blogs/:id" element={<BlogsDetailPage />} />
+        <Route path="/blogs/:slug" element={<BlogsDetailPage />} />
 
         <Route path="/*" element={<h1>404 - Not Found</h1>} />
       </Routes>

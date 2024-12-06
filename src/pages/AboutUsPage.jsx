@@ -5,6 +5,7 @@ import TeamsContainer from "../containers/TeamsContainer";
 import StatisticsComponent from "../components/StatisticsComponent";
 import TrustedContainer from "../containers/TrustedContainer";
 import BannerComponent from "../components/BannerComponent";
+import HeadComponent from "../components/HeadComponent";
 
 const AboutUsPage = () => {
   return (

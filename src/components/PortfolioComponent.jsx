@@ -31,22 +31,23 @@ const PortfolioComponent = ({ portfolio }) => {
       </nav>
 
       <div className={`${portfolio.type === "home" ? "grid-image-container" : "gird-cols-1 md:grid-cols-2 mx-6 lg:mx-40 xl:mx-72 gap-4 lg:gap-16 place-items-center"} grid`}>
-      {portfolio.images.map((item, index) => (
+      {portfolio.images.map((image, index) => (
         <div
           key={index}
           className={`relative ${portfolio.type === "home" ? "h-[432px]" : "xl:w-[629px] xl:h-[629px] lg:w-[429px] lg:h-[429px] w-full"} group ${portfolio.type === "home" && `portfolio${index + 1}`}`}
         >
           <img
-            src={item}
+            src={image.banner}
             className="w-full h-full object-cover"
             alt={`Portfolio ${index + 1}`}
           />
 
-          <h3
+          <Link
+            to={`${image.id}`}
             className="text-[32px] font-bold absolute bottom-0 left-0 right-0 text-white bg-black/60 opacity-0 transition-opacity duration-300 group-hover:opacity-100 text-center py-4"
           >
-            Portfolio title
-          </h3>
+            {image.title}
+          </Link>
         </div>
       ))}
 

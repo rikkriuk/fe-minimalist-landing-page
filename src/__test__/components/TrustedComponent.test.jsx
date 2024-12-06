@@ -12,9 +12,20 @@ jest.mock("../../assets/trusted company logo/stripe-light.svg", () => "mocked-st
 jest.mock("../../assets/trusted company logo/dhl-light.svg", () => "mocked-dhl-logo.svg");
 jest.mock("../../assets/trusted company logo/airbnb-light.svg", () => "mocked-airbnb-logo.svg");
 
+const mockLogos = [
+  "mocked-spotify-logo.svg",
+  "mocked-dropbox-logo.svg",
+  "mocked-tesla-logo.svg",
+  "mocked-reddit-logo.svg",
+  "mocked-google-logo.svg",
+  "mocked-stripe-logo.svg",
+  "mocked-dhl-logo.svg",
+  "mocked-airbnb-logo.svg",
+]
+
 describe("TrustedComponent", () => {
   test("renders all logos", () => {
-    render(<TrustedComponent />);
+    render(<TrustedComponent logos={mockLogos} />);
     const logos = screen.getAllByAltText("Company Logo");
     expect(logos).toHaveLength(8);
   });

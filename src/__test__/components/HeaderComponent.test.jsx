@@ -21,7 +21,7 @@ describe("HeaderComponent", () => {
          </BrowserRouter>
       );
 
-      const linkItems = ["HOME", "ABOUT", "CONTACT", "BLOGS"];
+      const linkItems = ["HOME", "OUR WORKS", "ABOUT US", "CONTACT US", "BLOGS"];
       linkItems.forEach((item) => {
          expect(screen.getByText(item)).toBeInTheDocument();
       });
